@@ -1,0 +1,54 @@
+{% block footer %}
+
+<footer class="page-footer blue-grey darken-1">
+    <div class=>
+      <div class="row container">
+        <h5 >Send Me A Message</h5>
+        <div class="col l7 s12 ">
+            <div class="row">
+              <form method="POST">
+                {{ form.csrf_token }}
+                <div class = "center">
+                </div> 
+                <div class="row white-text">
+                <div class="input-field col s6">
+                    {{ form.name(class_='white-text') }}
+                    <label for="email">{{ form.name.label(class_='white-text') }}</label>
+                </div>
+                <div class="input-field col s6">
+                    {{ form.email(class_='white-text') }}
+                    <label for="email">{{ form.email.label(class_='white-text') }}</label>
+                </div>
+                </div>
+                <div class="row">
+                <div class="input-field col s12">
+                    {{ form.message(class_='white-text') }}
+                    <label for="password">{{ form.message.label(class_='white-text') }}</label>
+                </div>
+                </div>
+                
+                <button class="waves-effect waves-light btn center" id="button">{{ form.submit(class_='white-text') }}</button>
+            
+            </form>
+              </div>
+                    
+        </div>
+        <div class="col l3 offset-l1 s12">
+          <h5 >Contact Info</h5>
+          <ul>
+            <li>Phone: +1 (415) 605-7445</li>
+            <li>Email: rachit1405@gmail.com</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container center">
+        Thats All Folks!!!
+      <!-- <a class="grey-text text-lighten-4 right" href="#!">More Links</a> -->
+      </div>
+    </div>
+  </footer>
+
+
+  {% endblock %}

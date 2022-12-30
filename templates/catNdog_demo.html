@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+<div class="card center">
+<div class="card-title deep-orange-text fa-thin center">upload an image of a cat or a dog</div>
+<div>
+
+<form method='POST' enctype='multipart/form-data'>
+    {{ catNdog_form.csrf_token() }}
+    {{ catNdog_form.file() }}
+    {{ catNdog_form.submit() }}
+</form>
+{% include "message.html" %}
+</div>
+</div>
+</div>
+
+{% endblock %}
