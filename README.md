@@ -1,1 +1,1 @@
-# CatNDog with github actions
+# CatNDog
